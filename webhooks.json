@@ -1,0 +1,100 @@
+{
+  "eventType": "conversation.tags.updated",
+  "data": {
+    "id": "fe8b39b1-34c5-4229-a70f-275a75acd952",
+    "ticketId": 26,
+    "subject": "Duis aute irure dolor in reprehenderit in voluptate velit",
+    "excerpt": "Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat...",
+    "status": "Active",
+    "priority": "Normal",
+    "active": true,
+    "createdAt": "2021-06-29T13:04:05.000000Z",
+    "tags": [
+      {
+        "name": "Beatae"
+      },
+      {
+        "name": "Consequuntur"
+      },
+      {
+        "name": "Cumque"
+      },
+      {
+        "name": "Eos"
+      }
+    ],
+    "inbox": [
+      {
+        "id": "d57d5d46-8416-406c-9048-7e12f070edbe",
+        "name": "Dev",
+        "inboxAddress": "example@app.thrivedesk.email",
+        "connectedEmailAddress": "example@mail.com",
+        "defaultStatus": "Active"
+      }
+    ],
+    "cc": [
+      "examplecc@mail.com"
+    ],
+    "bcc": [
+      "examplebcc@mail.com"
+    ],
+    "assignedTo": [
+      {
+        "id": "dcc1dd2f-ec08-4926-bc19-da015285533b",
+        "firstName": "Assigned",
+        "lastName": "Example",
+        "email": "exampleassigned@mail.com"
+      }
+    ],
+    "contactInfo": [
+      {
+        "id": "85afc0c9-3cd7-4997-aedf-1931f9698597",
+        "name": "example",
+        "email": "example@mail.com",
+        "avatar": null
+      }
+    ],
+    "hasAttachment": false,
+    "hasInlineAttachment": false,
+    "isDraft": false,
+    "threadsCount": 3,
+    "threads": [
+      {
+        "id": "7ad785d2-740f-4c13-b0a0-8c4316774d45",
+        "type": "Email",
+        "status": "Active",
+        "messageId": "<eb906211-6a52-4351-b9bd-f886933d6cf8@thrivedesk.test>",
+        "direction": "Outbound",
+        "htmlBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut...",
+        "textBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut...",
+        "createdAt": "2021-06-29T13:04:05.000000Z",
+        "updatedAt": "2021-06-29T13:04:05.000000Z",
+        "viewedAt": null
+      },
+      {
+        "id": "6c9b92d5-41b9-42f2-b6a2-6358f70a38f6",
+        "type": "Email",
+        "status": "Active",
+        "messageId": "<e8fa8cbc-47b1-4e7e-996d-a37fe4ef76dd@thrivedesk.test>",
+        "direction": "Outbound",
+        "htmlBody": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea...",
+        "textBody": null,
+        "createdAt": "2021-06-29T13:04:46.000000Z",
+        "updatedAt": "2021-06-29T13:04:46.000000Z",
+        "viewedAt": null
+      },
+      {
+        "id": "568f4497-e7e4-4408-b9f8-680ae4413dcb",
+        "type": "Note",
+        "status": "Active",
+        "messageId": "<0bd13e23-9d3a-4c61-a490-c3e8b0136bc4@thrivedesk.test>",
+        "direction": null,
+        "htmlBody": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...",
+        "textBody": null,
+        "createdAt": "2021-06-29T13:04:59.000000Z",
+        "updatedAt": "2021-06-29T13:04:59.000000Z",
+        "viewedAt": null
+      }
+    ]
+  }
+}
