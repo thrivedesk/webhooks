@@ -1,7 +1,7 @@
 {
   "eventType": "conversation.tags.updated",
   "data": {
-    "id": "fe8b39b1-34c5-4229-a70f-275a75acd952",
+    "id": "dea1fca0-6529-43fd-91df-044afbf2a1d4",
     "ticketId": 26,
     "subject": "Duis aute irure dolor in reprehenderit in voluptate velit",
     "excerpt": "Cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat...",
@@ -18,13 +18,10 @@
       },
       {
         "name": "Cumque"
-      },
-      {
-        "name": "Eos"
       }
     ],
     "inbox": {
-      "id": "d57d5d46-8416-406c-9048-7e12f070edbe",
+      "id": "f86385ff-9ce5-456a-a207-0bbf4ec59c0e",
       "name": "Dev",
       "inboxAddress": "example@app.thrivedesk.email",
       "connectedEmailAddress": "example@mail.com",
@@ -37,13 +34,13 @@
       "examplebcc@mail.com"
     ],
     "assignedTo": {
-      "id": "dcc1dd2f-ec08-4926-bc19-da015285533b",
+      "id": "050cbdb6-a973-40df-a5dd-b7f72c993055",
       "firstName": "Assigned",
       "lastName": "Example",
       "email": "exampleassigned@mail.com"
     },
     "contactInfo": {
-      "id": "85afc0c9-3cd7-4997-aedf-1931f9698597",
+      "id": "925298d4-a7d9-4d6b-8a01-10b2dea439aa",
       "name": "example",
       "email": "example@mail.com",
       "avatar": null
@@ -54,7 +51,7 @@
     "threadsCount": 3,
     "threads": [
       {
-        "id": "7ad785d2-740f-4c13-b0a0-8c4316774d45",
+        "id": "967b48b3-32d7-4d63-81cc-4f6d04d879b1",
         "type": "Email",
         "status": "Active",
         "messageId": "<eb906211-6a52-4351-b9bd-f886933d6cf8@thrivedesk.test>",
@@ -66,7 +63,7 @@
         "viewedAt": null
       },
       {
-        "id": "6c9b92d5-41b9-42f2-b6a2-6358f70a38f6",
+        "id": "e84aea7e-65ee-4b5a-a8d0-4f216192847e",
         "type": "Email",
         "status": "Active",
         "messageId": "<e8fa8cbc-47b1-4e7e-996d-a37fe4ef76dd@thrivedesk.test>",
@@ -78,7 +75,7 @@
         "viewedAt": null
       },
       {
-        "id": "568f4497-e7e4-4408-b9f8-680ae4413dcb",
+        "id": "ce7946ae-86c4-4891-af2a-485d984a6a74",
         "type": "Note",
         "status": "Active",
         "messageId": "<0bd13e23-9d3a-4c61-a490-c3e8b0136bc4@thrivedesk.test>",
