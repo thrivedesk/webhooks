@@ -23,37 +23,31 @@
         "name": "Eos"
       }
     ],
-    "inbox": [
-      {
-        "id": "d57d5d46-8416-406c-9048-7e12f070edbe",
-        "name": "Dev",
-        "inboxAddress": "example@app.thrivedesk.email",
-        "connectedEmailAddress": "example@mail.com",
-        "defaultStatus": "Active"
-      }
-    ],
+    "inbox": {
+      "id": "d57d5d46-8416-406c-9048-7e12f070edbe",
+      "name": "Dev",
+      "inboxAddress": "example@app.thrivedesk.email",
+      "connectedEmailAddress": "example@mail.com",
+      "defaultStatus": "Active"
+    },
     "cc": [
       "examplecc@mail.com"
     ],
     "bcc": [
       "examplebcc@mail.com"
     ],
-    "assignedTo": [
-      {
-        "id": "dcc1dd2f-ec08-4926-bc19-da015285533b",
-        "firstName": "Assigned",
-        "lastName": "Example",
-        "email": "exampleassigned@mail.com"
-      }
-    ],
-    "contactInfo": [
-      {
-        "id": "85afc0c9-3cd7-4997-aedf-1931f9698597",
-        "name": "example",
-        "email": "example@mail.com",
-        "avatar": null
-      }
-    ],
+    "assignedTo": {
+      "id": "dcc1dd2f-ec08-4926-bc19-da015285533b",
+      "firstName": "Assigned",
+      "lastName": "Example",
+      "email": "exampleassigned@mail.com"
+    },
+    "contactInfo": {
+      "id": "85afc0c9-3cd7-4997-aedf-1931f9698597",
+      "name": "example",
+      "email": "example@mail.com",
+      "avatar": null
+    },
     "hasAttachment": false,
     "hasInlineAttachment": false,
     "isDraft": false,
