@@ -2,8 +2,7 @@
 
 ### Apps/Webhooks
 
-Webhooks are the way to have ThriveDesk call a script on your server when one or more events have happened, enabling you
-to react however you like. Webhooks can be thought of as event listeners or push notifications.
+Webhooks are the way to have ThriveDesk call a script on your server when one or more events have happened, enabling you to react however you like. Webhooks can be thought of as event listeners or push notifications.
 
 ### Available Events:
 
@@ -152,17 +151,11 @@ to react however you like. Webhooks can be thought of as event listeners or push
 
 ### Verifying:
 
-Webhooks can be verified as coming from ThriveDesk by calculating a digital signature. Each webhook request contains
-an ***X-TD-SIGNATURE*** header, generated using the given secret key, along with the JSON encoded payload data sent in
-the request.
+Webhooks can be verified as coming from ThriveDesk by calculating a digital signature. Each webhook request contains an ***X-TD-SIGNATURE*** header, generated using the given secret key, along with the JSON encoded payload data (only the ***data*** field of response data) sent in the request.
 
-To verify if the request came from ThriveDesk, compute the HMAC hash and compare it to the header value sent in the
-request. If the computed signatures match, you can be sure the request was sent from ThriveDesk.
+To verify if the request came from ThriveDesk, compute the HMAC hash and compare it to the header value sent in the request. If the computed signatures match, you can be sure the request was sent from ThriveDesk.
 
-Signatures are calculated based on the raw request body passed to your servers by ThriveDesk. This means that if
-non-ASCII characters are contained in the payload, you will need to calculate the signature based on the escaped,
-transliterated string passed to you by ThriveDesk. We recommend this as best practice in general, even for those
-primarily working with ASCII data.
+Signatures are calculated based on the raw request body passed to your servers by ThriveDesk. This means that if non-ASCII characters are contained in the payload, you will need to calculate the signature based on the escaped, transliterated string passed to you by ThriveDesk. We recommend this as best practice in general, even for those primarily working with ASCII data.
 
 #### PHP:
 
@@ -173,7 +166,12 @@ function isFromThriveDesk($data, $signature, $secret_key) {
     return $signature == $calculate;
 }
 
-if (isFromThriveDesk($data, $signature, $secret_key)) {
+/**
+ * $request->get('data')
+ * 
+ * only the data field of request body
+ */ 
+if (isFromThriveDesk($request->get('data'), $signature, $secret_key)) { 
 	// do something
 }
 ```
@@ -183,7 +181,12 @@ if (isFromThriveDesk($data, $signature, $secret_key)) {
 ```javascript
 const crypto = require('crypto');
 
-if (isFromThriveDesk(data, signature, secret_key)) {
+/**
+ * request.body.data
+ *
+ * only the data field of reqeust body
+ */
+if (isFromThriveDesk(request.body.data, signature, secret_key)) {
     // do something
 }
 
@@ -197,11 +200,8 @@ let isFromThriveDesk = (data, signature, secret_key) => {
 
 ### Responses:
 
-Anything returned to the body of the response will be discarded. In order to know the webhook was successful, an HTTP
-status code between ***200*** and ***299*** must be returned.
+Anything returned to the body of the response will be discarded. In order to know the webhook was successful, an HTTP status code between ***200*** and ***299*** must be returned.
 
 A status code of ***410*** will cause the webhook to get deactivated/deleted.
 
-Any status codes other than something between ***200*** and ***299*** or ***410*** is a failure of some kind. If the
-event fails several times, it is discarded. Webhooks are automatically deactivated if three or more events get
-discarded.
+Any status codes other than something between ***200*** and ***299*** or ***410*** is a failure of some kind. If the event fails several times, it is discarded. Webhooks are automatically deactivated if three or more events get discarded.
