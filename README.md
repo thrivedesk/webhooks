@@ -120,29 +120,29 @@ to react however you like. Webhooks can be thought of as event listeners or push
 
 ### Response fields (Conversation):
 
-| Path                                                                              | Type                                                                  | Description                                                                                                                                                             |
-|-----------------------------------------------------------------------------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span style="color: #434343; background: #efefef">*eventType*</span>              | <span style="color: #434343; background: #efefef">*String*</span>     | Type of the event, one of the available events |
-| <span style="color: #434343; background: #efefef">*data*</span>                   | <span style="color: #434343; background: #efefef">*Object*</span>     | Main response body |
-| <span style="color: #434343; background: #efefef">*id*</span>                     | <span style="color: #434343; background: #efefef">*String*</span>     | Unique identifier |
-| <span style="color: #434343; background: #efefef">*ticketId*</span>               | <span style="color: #434343; background: #efefef">*Integer*</span>    | Unique ticket identifier |
-| <span style="color: #434343; background: #efefef">*subject*</span>                | <span style="color: #434343; background: #efefef">*String*</span>     | Conversation subject |
-| <span style="color: #434343; background: #efefef">*excerpt*</span>                | <span style="color: #434343; background: #efefef">*String*</span>     | Conversation excerpt |
-| <span style="color: #434343; background: #efefef">*status*</span>                 | <span style="color: #434343; background: #efefef">*String*</span>     | Conversation status, one of: <br/> <span style="color: #dd1144; background: #f6f8f8">*Active*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*Pending*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*Closed*</span> |
-| <span style="color: #434343; background: #efefef">*priority*</span>               | <span style="color: #434343; background: #efefef">*String*</span>     | Conversation priority, one of: <br/> <span style="color: #dd1144; background: #f6f8f8">*High*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*Normal*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*Low*</span> |
-| <span style="color: #434343; background: #efefef">*active*</span>                 | <span style="color: #434343; background: #efefef">*Boolean*</span>    | Conversation active status |
-| <span style="color: #434343; background: #efefef">*createdAt*</span>              | <span style="color: #434343; background: #efefef">*String*</span>     | UTC time when the conversation was created |
-| <span style="color: #434343; background: #efefef">*tags*</span>                   | <span style="color: #434343; background: #efefef">*Array*</span>      | List of tags, with the following fields: <br/> <span style="color: #dd1144; background: #f6f8f8">*name*</span> |
-| <span style="color: #434343; background: #efefef">*inbox*</span>                  | <span style="color: #434343; background: #efefef">*Object*</span>     | Inbox information of the conversation, with the following fields: <br/> <span style="color: #dd1144; background: #f6f8f8">*id*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*name*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*inboxAddress*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*connectedEmailAddress*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*defaultStatus*</span> |
-| <span style="color: #434343; background: #efefef">*cc*</span>                     | <span style="color: #434343; background: #efefef">*Array*</span>      | List of emails that are cc’d |
-| <span style="color: #434343; background: #efefef">*bcc*</span>                    | <span style="color: #434343; background: #efefef">*Array*</span>      | List of emails that are bcc’d |
-| <span style="color: #434343; background: #efefef">*assignedTo*</span>             | <span style="color: #434343; background: #efefef">*Object*</span>     | Who the conversation is assigned to, with the following fields: <br/> <span style="color: #dd1144; background: #f6f8f8">*id*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*firstName*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*lastName*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*email*</span> |
-| <span style="color: #434343; background: #efefef">*contactInfo*</span>            | <span style="color: #434343; background: #efefef">*Object*</span>     | An object containing the contact information associate with the conversation with the following fields: <br/> <span style="color: #dd1144; background: #f6f8f8">*id*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*name*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*email*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*avatar*</span> |
-| <span style="color: #434343; background: #efefef">*hasAttachment*</span>          | <span style="color: #434343; background: #efefef">*Boolean*</span>    | Conversation contain attachment or not |
-| <span style="color: #434343; background: #efefef">*hasInlineAttachment*</span>    | <span style="color: #434343; background: #efefef">*Boolean*</span>    | Conversation contains inline attachment or not |
-| <span style="color: #434343; background: #efefef">*isDraft*</span>                | <span style="color: #434343; background: #efefef">*Boolean*</span>    | Is conversation drafted or not |
-| <span style="color: #434343; background: #efefef">*threadsCount*</span>           | <span style="color: #434343; background: #efefef">*Integer*</span>    | Number of threads the conversation has |
-| <span style="color: #434343; background: #efefef">*threads*</span>                | <span style="color: #434343; background: #efefef">*Array*</span>      | List of threads, with the following fields: <br/> <span style="color: #dd1144; background: #f6f8f8">*id*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*type (Email, Note, Draft)*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*status*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*messageId*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*Direction (Inbound, Outbound )*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*htmlBody*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*textBody*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*createdAt*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*updatedAt*</span> <br/> <span style="color: #dd1144; background: #f6f8f8">*viewedAt*</span> |
+| Path                      | Type          | Description |
+|---------------------------|---------------|-------------|
+| *eventType*               | *String*      | Type of the event, one of the available events |
+| *data*                    | *Object*      | Main response body |
+| *id*                      | *String*      | Unique identifier |
+| *ticketId*                | *Integer*     | Unique ticket identifier |
+| *subject*                 | *String*      | Conversation subject |
+| *excerpt*                 | *String*      | Conversation excerpt |
+| *status*                  | *String*      | Conversation status, one of: <br/> ***Active*** <br/> ***Pending*** <br/> ***Closed*** |
+| *priority*                | *String*      | Conversation priority, one of: <br/> ***High*** <br/> ***Normal*** <br/> ***Low*** |
+| *active*                  | *Boolean*     | Conversation active status |
+| *createdAt*               | *String*      | UTC time when the conversation was created |
+| *tags*                    | *Array*       | List of tags, with the following fields: <br/> ***name*** |
+| *inbox*                   | *Object*      | Inbox information of the conversation, with the following fields: <br/> ***id*** <br/> ***name*** <br/> ***inboxAddress*** <br/> ***connectedEmailAddress*** <br/> ***defaultStatus*** |
+| *cc*                      | *Array*       | List of emails that are cc’d |
+| *bcc*                     | *Array*       | List of emails that are bcc’d |
+| *assignedTo*              | *Object*      | Who the conversation is assigned to, with the following fields: <br/> ***id*** <br/> ***firstName*** <br/> ***lastName*** <br/> ***email*** |
+| *contactInfo*             | *Object*      | An object containing the contact information associate with the conversation with the following fields: <br/> ***id*** <br/> ***name*** <br/> ***email*** <br/> ***avatar*** |
+| *hasAttachment*           | *Boolean*     | Conversation contain attachment or not |
+| *hasInlineAttachment*     | *Boolean*     | Conversation contains inline attachment or not |
+| *isDraft*                 | *Boolean*     | Is conversation drafted or not |
+| *threadsCount*            | *Integer*     | Number of threads the conversation has |
+| *threads*                 | *Array*       | List of threads, with the following fields: <br/> ***id*** <br/> ***type (Email, Note, Draft)*** <br/> ***status*** <br/> ***messageId*** <br/> ***Direction (Inbound, Outbound )*** <br/> ***htmlBody*** <br/> ***textBody*** <br/> ***createdAt*** <br/> ***updatedAt*** <br/> ***viewedAt*** |
 
 ### Headers:
 
@@ -198,13 +198,10 @@ let isFromThriveDesk = (data, signature, secret_key) => {
 ### Responses:
 
 Anything returned to the body of the response will be discarded. In order to know the webhook was successful, an HTTP
-status code between <span style="color: #dd1144; background: #efefef">*200*</span>
-and <span style="color: #dd1144; background: #efefef">*299*</span> must be returned.
+status code between ***200*** and ***299*** must be returned.
 
-A status code of <span style="color: #dd1144; background: #efefef">*410*</span> will cause the webhook to get
-deactivated/deleted.
+A status code of ***410*** will cause the webhook to get deactivated/deleted.
 
-Any status codes other than something between <span style="color: #dd1144; background: #efefef">*200*</span>
-and <span style="color: #dd1144; background: #efefef">*299*</span>
-or <span style="color: #dd1144; background: #efefef">*410*</span> is a failure of some kind. If the event fails several
-times, it is discarded. Webhooks are automatically deactivated if three or more events get discarded.
+Any status codes other than something between ***200*** and ***299*** or ***410*** is a failure of some kind. If the
+event fails several times, it is discarded. Webhooks are automatically deactivated if three or more events get
+discarded.
