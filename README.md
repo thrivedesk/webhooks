@@ -13,8 +13,8 @@ Webhooks are the way to have ThriveDesk call a script on your server when one or
 | *Conversation created*                | *conversation.created*            |
 | *Conversation assigned*               | *conversation.assigned*           |
 | *Note added to conversation*          | *conversation.note.added*         |
-| *User replies to conversation*        | *conversation.agent.reply*        |
-| *Customer replies to conversation*    | *conversation.contact.reply*      |
+| *User replies to conversation*        | *conversation.agent.replied*      |
+| *Customer replies to conversation*    | *conversation.contact.replied*    |
 | *Conversation status updated*         | *conversation.status.updated*     |
 | *Conversation Tags added/updated*     | *conversation.tags.updated*       |
 | *Conversation moved*                  | *conversation.moved*              |
@@ -27,6 +27,7 @@ Webhooks are the way to have ThriveDesk call a script on your server when one or
 {
   "eventType": "conversation.tags.updated",
   "data": {
+    "type": "conversation",
     "id": "dea1fca0-6529-43fd-91df-044afbf2a1d4",
     "ticketId": 26,
     "subject": "Duis aute irure dolor in reprehenderit in voluptate velit",
@@ -204,4 +205,4 @@ Anything returned to the body of the response will be discarded. In order to kno
 
 A status code of ***410*** will cause the webhook to get deactivated/deleted.
 
-Any status codes other than something between ***200*** and ***299*** or ***410*** is a failure of some kind. If the event fails several times, it is discarded. Webhooks are automatically deactivated if three or more events get discarded.
+Any status codes other than something between ***200*** and ***299*** or ***410*** is a failure of some kind. If the event fails several times, it is discarded.
