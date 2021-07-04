@@ -37,15 +37,9 @@ Webhooks are the way to have ThriveDesk call a script on your server when one or
     "active": true,
     "createdAt": "2021-06-29T13:04:05.000000Z",
     "tags": [
-      {
-        "name": "Beatae"
-      },
-      {
-        "name": "Consequuntur"
-      },
-      {
-        "name": "Cumque"
-      }
+      "Beatae",
+      "Consequuntur",
+      "Cumque"
     ],
     "inbox": {
       "id": "f86385ff-9ce5-456a-a207-0bbf4ec59c0e",
@@ -66,7 +60,7 @@ Webhooks are the way to have ThriveDesk call a script on your server when one or
       "lastName": "Example",
       "email": "exampleassigned@mail.com"
     },
-    "contactInfo": {
+    "contact": {
       "id": "925298d4-a7d9-4d6b-8a01-10b2dea439aa",
       "name": "example",
       "email": "example@mail.com",
