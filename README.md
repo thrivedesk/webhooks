@@ -45,8 +45,7 @@ Webhooks are the way to have ThriveDesk call a script on your server when one or
       "id": "f86385ff-9ce5-456a-a207-0bbf4ec59c0e",
       "name": "Dev",
       "inboxAddress": "example@app.thrivedesk.email",
-      "connectedEmailAddress": "example@mail.com",
-      "defaultStatus": "Active"
+      "connectedEmailAddress": "example@mail.com"
     },
     "cc": [
       "examplecc@mail.com"
@@ -68,14 +67,12 @@ Webhooks are the way to have ThriveDesk call a script on your server when one or
     },
     "hasAttachment": false,
     "hasInlineAttachment": false,
-    "isDraft": false,
     "threadsCount": 3,
     "threads": [
       {
         "id": "967b48b3-32d7-4d63-81cc-4f6d04d879b1",
         "type": "Email",
         "status": "Active",
-        "messageId": "<eb906211-6a52-4351-b9bd-f886933d6cf8@thrivedesk.test>",
         "direction": "Outbound",
         "htmlBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut...",
         "textBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut...",
@@ -87,7 +84,6 @@ Webhooks are the way to have ThriveDesk call a script on your server when one or
         "id": "e84aea7e-65ee-4b5a-a8d0-4f216192847e",
         "type": "Email",
         "status": "Active",
-        "messageId": "<e8fa8cbc-47b1-4e7e-996d-a37fe4ef76dd@thrivedesk.test>",
         "direction": "Outbound",
         "htmlBody": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea...",
         "textBody": null,
@@ -99,7 +95,6 @@ Webhooks are the way to have ThriveDesk call a script on your server when one or
         "id": "ce7946ae-86c4-4891-af2a-485d984a6a74",
         "type": "Note",
         "status": "Active",
-        "messageId": "<0bd13e23-9d3a-4c61-a490-c3e8b0136bc4@thrivedesk.test>",
         "direction": null,
         "htmlBody": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla...",
         "textBody": null,
@@ -117,6 +112,7 @@ Webhooks are the way to have ThriveDesk call a script on your server when one or
 | Path                      | Type          | Description |
 |---------------------------|---------------|-------------|
 | *eventType*               | *String*      | Type of the event, one of the available events |
+| *type*                    | *String*      | Type of the data, ex: conversation |
 | *data*                    | *Object*      | Main response body |
 | *id*                      | *String*      | Unique identifier |
 | *ticketId*                | *Integer*     | Unique ticket identifier |
@@ -127,7 +123,7 @@ Webhooks are the way to have ThriveDesk call a script on your server when one or
 | *active*                  | *Boolean*     | Conversation active status |
 | *createdAt*               | *String*      | UTC time when the conversation was created |
 | *tags*                    | *Array*       | List of tags, with the following fields: <br/> ***name*** |
-| *inbox*                   | *Object*      | Inbox information of the conversation, with the following fields: <br/> ***id*** <br/> ***name*** <br/> ***inboxAddress*** <br/> ***connectedEmailAddress*** <br/> ***defaultStatus*** |
+| *inbox*                   | *Object*      | Inbox information of the conversation, with the following fields: <br/> ***id*** <br/> ***name*** <br/> ***inboxAddress*** <br/> ***connectedEmailAddress*** |
 | *cc*                      | *Array*       | List of emails that are cc’d |
 | *bcc*                     | *Array*       | List of emails that are bcc’d |
 | *assignedTo*              | *Object*      | Who the conversation is assigned to, with the following fields: <br/> ***id*** <br/> ***firstName*** <br/> ***lastName*** <br/> ***email*** |
@@ -136,7 +132,7 @@ Webhooks are the way to have ThriveDesk call a script on your server when one or
 | *hasInlineAttachment*     | *Boolean*     | Conversation contains inline attachment or not |
 | *isDraft*                 | *Boolean*     | Is conversation drafted or not |
 | *threadsCount*            | *Integer*     | Number of threads the conversation has |
-| *threads*                 | *Array*       | List of threads, with the following fields: <br/> ***id*** <br/> ***type (Email, Note, Draft)*** <br/> ***status*** <br/> ***messageId*** <br/> ***Direction (Inbound, Outbound )*** <br/> ***htmlBody*** <br/> ***textBody*** <br/> ***createdAt*** <br/> ***updatedAt*** <br/> ***viewedAt*** |
+| *threads*                 | *Array*       | List of threads, with the following fields: <br/> ***id*** <br/> ***type (Email, Note, Draft)*** <br/> ***status*** <br/> ***Direction (Inbound, Outbound )*** <br/> ***htmlBody*** <br/> ***textBody*** <br/> ***createdAt*** <br/> ***updatedAt*** <br/> ***viewedAt*** |
 
 ### Headers:
 
